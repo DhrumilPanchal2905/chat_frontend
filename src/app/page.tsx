@@ -84,7 +84,7 @@ export default function ChatApp() {
   // ===========================
   useEffect(() => {
     if (isLoggedIn) {
-      const socketInstance = io("http://localhost:3001", {
+      const socketInstance = io("https://chat-backend-1-gtya.onrender.com", {
         query: { username, role },
       });
 
@@ -189,7 +189,7 @@ export default function ChatApp() {
         }
       };
 
-      xhr.open("POST", "http://localhost:3001/upload");
+      xhr.open("POST", "https://chat-backend-1-gtya.onrender.com/upload");
       xhr.send(formData);
     } else {
       // Text-only message
